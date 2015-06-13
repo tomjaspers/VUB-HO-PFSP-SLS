@@ -1,0 +1,27 @@
+Compile using ANT:
+-------------------
+$ ant build && ant jar
+
+
+Run and see command line options
+---------------------------------
+$ java -jar flowshop.jar -help
+
+
+Run IG / SA on a specific instance (-time is optional)
+-------------------------------------------------------
+java -jar flowshop.jar -run -sls ig -ig_d 4 -ig_t 0.4 -instance instances/50x20_1 -time 10 
+java -jar flowshop.jar -run -sls sa -sa_cooling 1.45 -sa_init slack -sa_steps 0.20 -sa_t 150 -instance instances/50x20_1 -time 10
+
+
+Run benchmarks (5 iterations / instance of both algorithms)
+------------------------------------------------------------
+$ java -jar flowshop.jar -bench -results "/Users/tjs/Desktop/results/"
+
+
+Generate solution quality trace (SQT) for IG / SA 
+(25 iterations on the first instance variant of every size)
+------------------------------------------------------------
+java -jar flowshop.jar -sqt -sls ig -results "/Users/tjs/Desktop/results/"
+java -jar flowshop.jar -sqt -sls sa -results "/Users/tjs/Desktop/results/"
+

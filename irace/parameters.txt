@@ -1,0 +1,8 @@
+### PARAMETER FILE FOR THE HO-PFSP-SLS SOFTWARE - Simulated Annealing
+
+# name		switch		     type	values			[conditions (using R syntax)]
+
+init			"--sa_init "		c	(random, slack)
+temp     		"--sa_t "     		i  	(125, 175)
+steps           "--sa_steps "		i  	(10, 20)
+cooling			"--sa_cooling "  	r	(5.50, 6.50)
